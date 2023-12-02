@@ -1,0 +1,43 @@
+
+.hero{
+    background: url(images/Screenshot\ \(85\).png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.hero .contanier{
+    width: 80%;
+    margin: auto;
+}
+.hero nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero nav .logo{
+    color: #053f5c;
+    font-size: 35px;
+    font-weight: 700;
+}
+.hero nav .logo span{
+    color: #6772e5;
+}
+
+.hero .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero .content .div-text span{
+    color: #6772e5;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.5;
+}
+
+
+
+
+

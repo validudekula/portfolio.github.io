@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Link file css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+         
+        .goback-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    
+
+/* Define the hover effect */
+.goback-button:hover {
+    background-color: white;
+   
+}
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="contanier">
+
+            <nav>
+                <a href="#" class="logo">Mastan's<span> portfolio</span></a>
+                
+                <div class="nav-links">
+                    <a class="active" href="https://dudekula.netlify.app/#home">home</a>
+                    <a href="https://dudekula.netlify.app/#about">about</a>
+                    <a href="https://dudekula.netlify.app/#project">projects</a>
+                    <a href="https://dudekula.netlify.app/#awards">certificates</a>
+                    <a href="https://dudekula.netlify.app/#footer">contact</a>
+                </div>
+            </nav>
+
+            <div class="content">
+                <div class="div-text">
+                    <h4>Hello I'm</h4>
+                    <h1>Dudekula Mastan vali</h1>
+                    <span id="typing-text1" >A</span>
+                    <div class="social-link">
+                        <a href="https://github.com/validudekula"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/validudek/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="https://dudekula.netlify.app/images/Mastan%20Resume.pdf" class="btn">Download Resume</a>
+                </div>
+
+                <div class="div-img">
+                    <img src="images/vali_m.png" alt="">
+                </div>
+            </div>
+            
+        <div style=" color: #fff;
+        font-size: 60px;
+        margin: 25px 0 10px; text-align: center;"><h6>THANK YOU! FOR CONTACTING ME I WILL GET BACK TO YOU SOON.</h6>
+        </div>
+        </div >
+        <div style="text-align: center;">
+            <button class="goback-button" onclick="history.back()">Back Home</button>
+
+        </div>
+        </div>
+    </div>
+
+    <script>
+        const textToType = "spiring Data Analyst"; // Text to be typed (excluding the first letter)
+        const typingSpeed = 80; // Typing speed in milliseconds
+        const backspaceSpeed = 100; // Backspace speed in milliseconds
+        const waitTime = 1500; // Wait time after typing completion in milliseconds
+        let charIndex1 = 0;
+        let charIndex2 = 0;
+    
+        function typeText1() {
+            const textElement1 = document.getElementById('typing-text1');
+            textElement1.textContent += textToType.charAt(charIndex1);
+            charIndex1++;
+    
+            if (charIndex1 < textToType.length) {
+                setTimeout(typeText1, typingSpeed);
+            } else {
+                // Wait for 2 seconds after typing
+                setTimeout(eraseText1, waitTime);
+            }
+        }
+    
+        function eraseText1() {
+            const textElement1 = document.getElementById('typing-text1');
+            const currentText1 = textElement1.textContent;
+            const newText1 = currentText1.slice(0, -1);
+            textElement1.textContent = newText1;
+    
+            if (newText1.length > 1) { // Leave the first letter
+                setTimeout(eraseText1, backspaceSpeed);
+            } else if (newText1.length === 1) { // When only one letter remains, start typing again
+                charIndex1 = 0;
+                setTimeout(typeText1, typingSpeed);
+            }
+        }
+    
+        function typeText2() {
+            const textElement2 = document.getElementById('typing-text2');
+            textElement2.textContent += textToType.charAt(charIndex2);
+            charIndex2++;
+    
+            if (charIndex2 < textToType.length) {
+                setTimeout(typeText2, typingSpeed);
+            } else {
+                // Wait for 2 seconds after typing
+                setTimeout(eraseText2, waitTime);
+            }
+        }
+    
+        function eraseText2() {
+            const textElement2 = document.getElementById('typing-text2');
+            const currentText2 = textElement2.textContent;
+            const newText2 = currentText2.slice(0, -1);
+            textElement2.textContent = newText2;
+    
+            if (newText2.length > 1) { // Leave the first letter
+                setTimeout(eraseText2, backspaceSpeed);
+            } else if (newText2.length === 1) { // When only one letter remains, start typing again
+                charIndex2 = 0;
+                setTimeout(typeText2, typingSpeed);
+            }
+        }
+    
+        // Start the typing animation when the page loads
+        window.addEventListener('load', () => {
+            // Initially, we start with "H" already displayed
+            setTimeout(typeText1, typingSpeed * 2); // Start typing "ello, World!" after "H"
+            setTimeout(typeText2, typingSpeed * 2); // Start typing "ello, World!" after "H"
+        });
+    </script>
+    
+</body>
+</html>
